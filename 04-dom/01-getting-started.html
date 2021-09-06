@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: ghostwhite;
+        text-align: center;
+      }
+      button {
+        display: block;
+      }
+      div {
+        display: inline;
+      }
+      #name {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 800;
+      }
+      #quote {
+        font-size: 20px;
+        color: rgb(17, 17, 17);
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click me to get a new quote</button>
+    <div id="name"></div>
+    <div id="quote"></div>
+
+    <script src="01-getNextQuote.js"></script>
+    <script>
+      // DOM nodes -> objects the browser creates
+      console.dir(document); // HTML page
+      console.dir(document.documentElement); // root node (html element)
+      console.dir(document.documentElement.children);
+      console.dir(document.documentElement.children[1].children); // elements within body
+
+      const buttonNode = document.documentElement.children[1].children[0];
+      const quoteNode = document.getElementById("quote"); // #quote
+      const writerName = document.getElementById("name");
+      //   setTimeout(function () {
+      //     buttonNode.innerText = "Click me (new text generated in JS)";
+      //   }, 2000);
+
+      const nextQuote = getNextQuote(0);
+      buttonNode.addEventListener("click", function () {
+        const quote = nextQuote();
+        quoteNode.innerText = quote.text;
+        writerName.innerText = quote.name;
+      });
+    </script>
+  </body>
+</html>

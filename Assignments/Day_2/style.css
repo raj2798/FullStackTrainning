@@ -1,0 +1,47 @@
+button{
+    padding: 10px;
+    border-radius: 5px ;
+    border: 0px;
+    margin: 10px;
+    color: white;
+}
+.btn-buy{
+    background-color: navy;
+}
+.btn-buy:hover{
+    background-color: rgb(96, 96, 206);
+}
+.btn-buy:active{
+    background-color: rgb(47, 47, 243);
+}
+.btn-delete{
+    background-color: olive;
+}
+.btn-delete:hover{
+    background-color: rgb(80, 80, 4);
+}
+.btn-delete:active{
+    background-color: rgb(238, 238, 103);
+}
+.btn-ok{
+    background-color: crimson;
+}
+.btn-ok:hover{
+    background-color: rgb(196, 50, 79);
+}
+.btn-ok:active{
+    background-color: rgb(179, 89, 107);
+}
+.btn-google{
+    text-decoration: none;
+    background-color: navy;
+    color: white;
+    cursor: pointer;
+}
+.overflowing {
+    width: 60px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+

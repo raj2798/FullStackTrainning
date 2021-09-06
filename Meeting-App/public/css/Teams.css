@@ -1,0 +1,57 @@
+#para {
+  color: rgba(0, 0, 0, 0.514);
+  margin: 1em 0;
+}
+.TeamView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.TeamViewItem {
+  flex-basis: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1em 0;
+  height: 250px;
+  cursor: pointer;
+}
+.TeamViewItem:hover {
+  box-shadow: 0px 0px 2px 2px rgb(218, 165, 31, 0.5);
+}
+@media (min-width: 992px) {
+  .TeamViewItem {
+    flex-basis: 31%;
+  }
+}
+.TeamViewDetails {
+  margin: 0.5em;
+}
+#header-1 {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+#header-2 {
+  font-weight: 600;
+  font-size: 0.9em;
+}
+#members {
+  font-weight: 600;
+}
+#emails {
+  display: inline;
+}
+.select {
+  margin: 10px 0;
+}
+.addFormIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+.addFormIcon i:hover {
+  color: rgba(0, 0, 0, 0.322);
+}

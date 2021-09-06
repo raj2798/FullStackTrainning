@@ -1,0 +1,129 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  width: 100%;
+  background-color: rgb(219, 216, 216);
+  height: 50px;
+  position: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+nav .Logo {
+  /*logo--> myMeetings*/
+  display: none;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 10px 0 0 20px;
+}
+nav ul {
+  display: inline-block;
+  margin: 10px 10px 0 10px;
+}
+nav ul li {
+  display: inline;
+  padding: 5px 5px 0 0;
+  list-style: none;
+}
+nav ul li a {
+  color: rgba(4, 4, 49, 0.685);
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px 3px;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  color: black;
+  border-bottom: 4px solid gray;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.geetingUser {
+  padding: 0;
+}
+.Email {
+  color: rgb(95, 186, 223);
+}
+.geetingUser:hover {
+  border: none;
+}
+label #ham-btn,
+label #cancel {
+  position: absolute;
+  color: rgb(10, 10, 36);
+  font-size: 20px;
+  padding: 2px;
+  border: 1px solid rgb(27, 27, 104);
+  cursor: pointer;
+  margin-top: 12px;
+  right: 15%;
+  display: none;
+  border-radius: 5px;
+}
+#check {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .geetingUser {
+    display: none;
+  }
+  .nav {
+    position: fixed;
+  }
+  .btnLogout {
+    position: absolute;
+    margin: 10px 10px 0 0;
+    top: 0;
+    right: 0;
+  }
+  nav .Logo {
+    display: block;
+  }
+  label #ham-btn {
+    display: block;
+  }
+  nav .list-left {
+    position: fixed;
+    text-align: center;
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(10, 10, 36);
+    top: 50px;
+    left: -100%;
+    transition-duration: 1s;
+  }
+  nav .list-left li {
+    padding: 20px;
+    display: block;
+    line-height: 30px;
+  }
+  nav .list-left a {
+    color: skyblue;
+  }
+  nav .list-left a:hover,
+  nav .list-left a.active {
+    color: white;
+    font-size: 1.7em;
+  }
+
+  #check:checked ~ label #ham-btn {
+    display: none;
+  }
+  #check:checked ~ label #cancel {
+    display: block;
+    right: 20px;
+    padding: 3px 5px;
+  }
+  #check:checked ~ ul li .btnLogout {
+    display: none;
+  }
+}

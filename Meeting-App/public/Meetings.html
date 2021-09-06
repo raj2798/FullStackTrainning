@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="external/normalize.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/Meetings.css" />
+    <link rel="stylesheet" href="css/utils.css">
+    <title>Meeting</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p class="Logo">myMeetings</p>
+        <ul class="list-left" id="listLeft">
+          <li><a href="calender.html" class="active">Calender</a></li>
+          <li><a href="Meetings.html">Meetings</a></li>
+          <li><a href="Teams.html">Teams</a></li>
+        </ul>
+        <input type="checkbox" id="check" />
+        <label for="check">
+          <i class="fas fa-bars" id="ham-btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <ul>
+          <li><a href="#" class="geetingUser">Hello</a></li>
+          <li><a href="#" class="geetingUser Email">abc@gmail.com</a></li>
+          <li><a href="#" class="btnLogout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Navbar End -->
+    <div class="container">
+      <div class="lblTop">Meetings</div>
+      <hr />
+      <div class="forms-btn">
+        <div>
+          <button class="btnFilterMeetings active">
+            Filter/Search Meetings
+          </button>
+        </div>
+        <div><button class="btnAddMeetings">Add a Meeting</button></div>
+      </div>
+
+      <hr class="borderBottomForms-btn" />
+      <div class="meetingPageForm-1">
+        <div class="searchMeetingForm">
+          <div class="searchMeeting-content">
+            <p>Search for Meetings</p>
+            <div class="searchMeeting-form">
+              <hr />
+              <div>
+                <label for="date">Date</label>
+              </div>
+              <div>
+                <select name="" id="date">
+                  <option value="today">TODAY</option>
+                  <option value="all">ALL</option>
+                  <option value="past">PAST</option>
+                  <option value="upcoming">UPCOMING</option>
+                </select>
+              </div>
+              <div>
+                <label for="searchFor">Search for</label>
+              </div>
+              <div>
+                <textarea
+                  id="searchFor"
+                  name=""
+                  rows="2"
+                  placeholder="Search using words which describe the meeting"
+                ></textarea>
+              </div>
+              <button id="search">Search</button>
+            </div>
+          </div>
+        </div>
+        <div class="meeting-list">
+          <p>Meetings matching search criteria</p>
+          <hr />
+          <div class="meeting-list-item">
+            <div class="meeting-item-details">
+              <p class="details">12 September 2020 <span>05:00 - 06:00</span></p>
+              <div class="details"><label>Project kickoff</label></div>
+              <div class="details">
+                <button class="excuseYourself">Excuse Yourself</button>
+              </div>
+              <hr />
+              <label class="details Attendees">
+                Attendees: <span>mark@example.com,abc@gmail.com</span>
+              </label>
+              <div>
+                <select class="selectMember">
+                  <option value="">Select member</option>
+                  <option value="">abc@gmail.com</option>
+                  <option value="">pqr@gmail.com</option>
+                  <option value="">xyz@gmail.com</option>
+                  <option value="">mno@gmail.com</option>
+                </select>
+                <button id="btnAdd">Add</button>
+              </div>
+            </div>
+          </div>
+  
+          <div class="meeting-list-item">
+            <div class="meeting-item-details">
+              <p class="details">12 September 2020 <span>10:30 - 11:30</span></p>
+              <div class="details"><label>AWS architecture</label></div>
+              <div class="details">
+                <button class="excuseYourself">Excuse Yourself</button>
+              </div>
+              <hr />
+              <label class="details Attendees">
+                Attendees: <span>pqr@example.com,xyz@gmail.com</span>
+              </label>
+              <div>
+                <select class="selectMember">
+                  <option value="">Select member</option>
+                  <option value="">abc@gmail.com</option>
+                  <option value="">pqr@gmail.com</option>
+                  <option value="">xyz@gmail.com</option>
+                  <option value="">mno@gmail.com</option>
+                </select>
+                <button id="btnAdd">Add</button>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+      
+      <!-- Add Meeting form --> 
+    </div>
+    <div class="addMeetingForm">
+      <p id="subHeading">Add a new meeting</p>
+      <div class="addMeeting-content">
+        <hr />
+        <div>
+          <form action="#">
+            <label for="date">Date</label><br />
+            <input type="date" id="date" />
+            <hr style="height: 10px; margin: 0; visibility: hidden" />
+            <label for="startTime">Start time (hh:mm)</label>
+            <hr style="height: 5px; margin: 0; visibility: hidden" />
+            <input type="number" max="23" min="0" />:<input
+              type="number"
+              max="59"
+              min="0"
+            />
+            <hr style="height: 10px; margin: 0; visibility: hidden" />
+            <label for="endTime">End time (hh:mm)</label>
+            <hr style="height: 5px; margin: 0; visibility: hidden" />
+            <input type="number" max="23" min="0" />:<input
+              type="number"
+              max="59"
+              min="0"
+            />
+            <hr style="height: 10px; margin: 0; visibility: hidden" />
+            <label for="desc">Description</label><br />
+            <hr style="height: 5px; margin: 0; visibility: hidden" />
+            <textarea
+              placeholder="what is agenda of the meeting?"
+              id="desc"
+              rows="3"
+              style="width: 100%"
+            ></textarea>
+            <hr style="height: 10px; margin: 0; visibility: hidden" />
+            <label for="">EmailIDs of Attendees, or teams's short</label>
+            <hr style="height: 5px; margin: 0; visibility: hidden" />
+            <input
+              type="text"
+              placeholder="abc@example.com, @annual-day, pqr@example"
+              style="width: 100%; height: 30px"
+            />
+            <p id="inputFormat">
+              seperate EmailIDs/team sort names by commas-team short names
+              always be with @
+            </p>
+            <input type="submit" value="Add Meeting" id="addMeeting" />
+          </form>
+        </div>
+      </div>
+    </div><!-- Add Meeting form end-->
+  </body>
+  <script src="js/Toggle.js"></script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            width: 90%;
+            max-width: 1024px;
+            margin: 1em auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 0 0 100%;
+            background-color: lightgray;
+        }
+
+        @media(min-width: 648px) {
+            .col {
+                flex-basis: 47%;
+            }
+        }
+
+        @media(min-width:992px) {
+            .col {
+                flex-basis: 31%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <h2>Section 1</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, dolore velit rem, deserunt sit
+                deleniti natus molestiae, ducimus iste fugiat recusandae? Aperiam, similique qui molestiae veritatis
+                nemo soluta maxime deleniti?
+            </p>
+        </div>
+        <div class="col">
+            <h2>Section 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, dolore velit rem, deserunt sit
+                deleniti natus molestiae, ducimus iste fugiat recusandae? Aperiam, similique qui molestiae veritatis
+                nemo soluta maxime deleniti?
+            </p>
+        </div>
+        <div class="col">
+            <h2>Section 3</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, dolore velit rem, deserunt sit
+                deleniti natus molestiae, ducimus iste fugiat recusandae? Aperiam, similique qui molestiae veritatis
+                nemo soluta maxime deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, repellat
+                iure labore sunt corporis consequatur delectus unde veniam tempora quaerat quisquam quos ex, pariatur
+                consequuntur. Molestiae at perferendis rem itaque?
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

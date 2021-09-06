@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DForm</title>
+    <style>
+        .form-group{
+            margin: 1em;
+        }
+        .form-group label{
+            width: 200px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<!-- 
+    checkbox,radio, textarea,select,range,date,time,datalist,file,image,email,url,color,fieldset
+ -->
+
+<body>
+    <form action="09-success.html" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Name">Name:</label>
+            <input type="text" name="full-name" id="Name" placeholder="Your Name" value="John doe" />
+        </div>
+        <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="Password" placeholder="Password" required />
+        </div>
+        <div class="form-group">
+            <input type="reset" value="Reset">
+            <input type="button" value="Some buttons" />
+            <Button>a button</Button>
+            <Button type="reset">a button</Button>
+        </div>
+        <div class="form-group">
+            <textarea name="message" cols="30" rows="5">Hello there!</textarea>
+            <select name="city" id="">
+                <option value=NDLS>New Delhi</option>
+                <option selected value="CST">Mumbai</option>
+                <option value="KOAA">Kolkatta</option>
+                <option value="MAS">Chennai</option>
+            </select>
+            <fieldset>
+                <legend>Interests</legend>
+                <label>
+                    <input type="checkbox" value="football" name="interest" checked />
+                    Football
+                </label>
+                <label>
+                    <input type="checkbox" value="Cricket" name="interest" />
+                    Cricket
+                </label>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <input type="date" min="2021-01-01" max="2021-02-02" />
+            <input type="email" name="primary-email" />
+            <input type="file" />
+            <input list="city" name="city" id="city-list">
+            <datalist id="city">
+                <option value="Abc">ABC</option>
+                <option value="Pqr">PQR</option>
+            </datalist>
+            <input type="submit" />
+        </div>
+    </form>
+
+</body>
+
+</html>

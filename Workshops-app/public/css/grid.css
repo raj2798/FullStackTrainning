@@ -1,0 +1,17 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-4,.col-8{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-4{
+    flex-basis: 32%;
+    
+}
+
+.col-8{
+    flex-basis: 64%;
+}

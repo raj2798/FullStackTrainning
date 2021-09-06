@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="external/normalize.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/calender.css" />
+    <!-- <script src="js/Toggle.js" defer></script> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Calender</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar">
+        <li class="myMeeting">myMeetings</li>
+        <ul class="list-left">
+          <li><a href="#">Calender</a></li>
+          <li><a href="#">Meetings</a></li>
+          <li><a href="#">Teams</a></li>
+        </ul>
+        <div>
+          <input type="checkbox" id="toggler" class="toggler" />
+          <label for="toggler" class="hamburger">
+            <span><i class="fas fa-bars"></i></span>
+          </label>
+        </div>
+        <ul class="list-right">
+          <li class="hello-user"><a href="#">Hello</a></li>
+          <li class="hello-user">
+            <a href="#" class="userEmail">Johndoe@gmail.com!</a>
+          </li>
+          <li><a href="index.html" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Navbar Ends -->
+
+    <div class="container">
+      <div class="lblCalender">Calender</div>
+      <div class="meeting-details">
+        <div class="schedule-picker">
+          <div class="date-day">
+            <div id="date-string">12 September 2020</div>
+            <div id="day-string">Saturday</div>
+          </div>
+          <div class="date-picker">
+            <input type="date" value="2020-09-12" id="pick-date" />
+          </div>
+        </div>
+        <div class="calender">
+          <div class="calender-hours">
+            <div>
+              <span>0</span>
+              <div class="calender-hour"></div>
+            </div>
+
+            <span>1</span>
+            <div class="calender-hour"></div>
+            <span>2</span>
+            <div class="calender-hour"></div>
+            <span>3</span>
+            <div class="calender-hour"></div>
+
+            <span>4</span>
+            <div class="calender-hour"></div>
+            <span>5</span>
+            <div class="calender-hour"></div>
+            <span>6</span>
+            <div class="calender-hour"></div>
+            <span>7</span>
+            <div class="calender-hour"></div>
+
+            <span>8</span>
+            <div class="calender-hour"></div>
+            <span>9</span>
+            <div class="calender-hour"></div>
+            <span>10</span>
+            <div class="calender-hour"></div>
+            <span>11</span>
+            <div class="calender-hour"></div>
+
+            <span>12</span>
+            <div class="calender-hour"></div>
+            <span>13</span>
+            <div class="calender-hour"></div>
+            <span>14</span>
+            <div class="calender-hour"></div>
+            <span>15</span>
+            <div class="calender-hour"></div>
+
+            <span>16</span>
+            <div class="calender-hour"></div>
+            <span>17</span>
+            <div class="calender-hour"></div>
+            <span>18</span>
+            <div class="calender-hour"></div>
+            <span>19</span>
+            <div class="calender-hour"></div>
+
+            <span>20</span>
+            <div class="calender-hour"></div>
+            <span>21</span>
+            <div class="calender-hour"></div>
+            <span>22</span>
+            <div class="calender-hour"></div>
+            <span>23</span>
+            <div class="calender-hour"></div>
+          </div>
+          <div class="calender-meeting meeting-1">
+            <h5>Project Kickoff</h5>
+            <p>Attendees:mark@example.com,abc@gmail.com</p>
+            <div class="calender-meeting meeting-2">
+              <h5>AWS architecture</h5>
+              <p>Attendees:pqr@example.com,xyz@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="name"></div>
+
+    <script>
+      const john = {
+        name: "John Doe",
+        age: 32,
+        emails: ["john@example.com", "john@gmail.com"],
+        address: {
+          city: "Bangalore",
+          pinCode: 560101,
+        },
+      };
+
+      const liEmails = john.emails.map((email) => `<li>${email}</li>`);
+      const lis = liEmails.join("");
+
+      //   const liAdd = john.address.((addr) => `<li>${addr}</li>`);
+      //   const lisAdd = liAdd.join("");
+      const name = document.querySelector("#name");
+
+      name.innerHTML = `
+                <div class="card">
+                    <h1>${john.name}</h1>
+                    <hr />
+                    <p>
+                        Age: ${john.age}
+                    </p>
+                    <ul>
+                        ${lis}
+                    </ul>
+                    <ul>
+                        ${lisAdd}
+                    </ul>
+                </div>
+            `;
+    </script>
+  </body>
+</html>

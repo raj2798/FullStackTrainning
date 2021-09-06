@@ -1,0 +1,136 @@
+.forms-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: 0 10px 5px 0;
+}
+.forms-btn button {
+  background-color: white;
+  color: rgb(5, 5, 177);
+  padding: 10px 3px;
+  border: none;
+  margin-right: 5px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.btnFilterMeetings {
+  border-radius: 5px 2px 0 0;
+}
+.btnAddMeetings {
+  border-radius: 0 5px 2px 0;
+}
+.borderBottomForms-btn {
+  margin-top: -5px;
+  width: 100%;
+  color: black;
+}
+.forms-btn button:hover,
+.btnFilterMeetings.active {
+  border: 1px solid rgba(165, 165, 165, 0.993);
+  color: black;
+  border-bottom: none;
+}
+.searchMeetingForm,
+.addMeetingForm {
+  background-color: skyblue;
+}
+meetingPageForm-1 {
+  display: none;
+}
+.searchMeeting-content {
+  margin: 0 10px 0 10px;
+}
+.searchMeeting-content p,
+#subHeading {
+  color: white;
+  margin-left: 10px;
+  padding-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#date,
+#searchFor {
+  width: 100%;
+  margin: 5px 0;
+  resize: none;
+}
+#date {
+  height: 30px;
+  outline: none;
+}
+#search {
+  padding: 5px 10px;
+  color: white;
+  background-color: rgb(18, 168, 228);
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.meeting-list {
+  margin-top: 1em;
+
+  margin-left: 10px;
+}
+.meeting-list p {
+  font-size: 23px;
+  font-weight: 600;
+}
+.meeting-list-item {
+  margin: 1em 0;
+  border: 1px solid rgba(0, 0, 0, 0.13);
+}
+.meeting-item-details {
+  margin: 0.5em 0 0.5em 1em;
+  background-color: white;
+}
+.meeting-item-details p {
+  font-size: 18px;
+}
+.meeting-item-details span {
+  font-size: 12px;
+  font-weight: 100;
+}
+.meeting-item-details hr {
+  margin-left: 0.3em;
+  width: 98%;
+}
+.details {
+  padding: 0.3em;
+}
+
+.Attendees {
+  font-weight: 700;
+}
+
+.addMeetingForm {
+  display: none;
+}
+.addMeeting-content {
+  margin: 0 10px 10px 10px;
+}
+input[type="number"] {
+  width: 3em;
+}
+input,
+textarea {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+#inputFormat {
+  color: white;
+  margin-bottom: 10px;
+}
+#addMeeting {
+  padding: 0.3em 0.3em;
+  background-color: rgb(18, 168, 228);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  color: white;
+  margin-bottom: 1em;
+  cursor: pointer;
+}

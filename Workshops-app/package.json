@@ -1,0 +1,24 @@
+{
+  "name": "workshops-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy": "cpx \"./node_modules/normalize.css/normalize.css\" \"public/external\"",
+    "start": "live-server public/"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live": "^0.1.25-beta.0",
+    "live-server": "^1.2.1",
+    "server": "^1.0.35"
+  },
+  "dependencies": {
+    "cpx": "^1.5.0",
+    "normalize.css": "^8.0.1"
+  }
+}

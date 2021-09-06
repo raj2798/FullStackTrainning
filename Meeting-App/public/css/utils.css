@@ -1,0 +1,25 @@
+#btnAdd {
+  padding: 0.1em 0.3em;
+  background-color: rgb(18, 168, 228);
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  color: white;
+  cursor: pointer;
+}
+.excuseYourself {
+  cursor: pointer;
+  padding: 0.2em 0.3em;
+  background-color: rgba(175, 0, 0, 0.911);
+  border: none;
+  color: white;
+  border-radius: 2px;
+}
+.selectMember {
+  margin: 0.2em 0 0 0;
+  outline: none;
+}
+hr {
+  margin: 10px 0;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  z-index: -1;
+  top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  width: 90%;
+}
+
+.lblTop {
+  font-size: 40px;
+  padding: 15px 10px 0 0;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+  .lblTop {
+    font-size: 30px;
+  }
+}

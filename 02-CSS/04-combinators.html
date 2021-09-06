@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*+,>,~, spaces, nospaces*/
+        a {
+            text-decoration: none;
+
+        }
+
+        .panel>a {
+            color: red;
+        }
+
+        section a {
+            font-size: 1.5em;
+        }
+
+        p.panel {
+            background-color: yellow;
+        }
+
+        p.panel[title="Introduction"] {
+            font-style: italic;
+        }
+
+        p+p {
+            color: red;
+        }
+
+        p+div {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <p class="panel" id="p1" title="Introduction">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolor vero illum autem quibusdam.
+                    Tenetur
+                    ipsam minus ab alias repudiandae odio! Architecto fugiat corporis iusto obcaecati vel. Saepe, in
+                    reiciendis?
+                    <a href="/">Link1</a>
+                </p>
+
+            </div>
+
+            <p class="panel">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, quia maxime. Rem aspernatur id nesciunt
+                quo
+                totam! Rem obcaecati exercitationem, consequuntur enim esse aut dicta voluptatem quibusdam voluptas
+                excepturi. Beatae.
+                Dicta impedit quae quisquam delectus aperiam consectetur ipsa eveniet accusantium cupiditate nesciunt
+                quaerat vel minima repellendus in reiciendis culpa est aliquid voluptate doloribus, illo sunt
+                reprehenderit!
+                Commodi id doloribus eaque?
+                <a href="/">Link1</a>
+            </p>
+            <a href="/">Link1</a>
+        </section>
+
+    </main>
+
+    <a href="/">Link1</a>
+</body>
+
+</html>

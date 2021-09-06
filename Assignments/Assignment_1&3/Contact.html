@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        .list-unstyled {
+            margin: 0px;
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        .list-unstyled li {
+            display: inline;
+        }            
+        .form-group label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .span-class {
+            color: red;
+        }
+        .btn{
+            margin: 10px;
+            padding: 5px;
+        }
+        #seperate_lbl {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="list-unstyled">
+            <li><a href="Main.html">Home</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Example Consulting Pvt. Ltd.</h1>
+    </header>
+    <hr>
+    <div>
+        <h2>Contact us</h2>
+        <label for="Phone">Phone: </label><a href="/">+123-787-1214</a><br>
+        <label for="Email">Email :</label><a href="/">abc@gmail.com</a>
+
+    </div>
+    <form action="#">
+        <div>
+            <h2>Drop a message</h2>
+            <p>
+                Please drop us a message by filling out this form, and we weill get back to you within 2 working days.
+            </p>
+            <p>Fields marked with <span class="span-class">*</span> are required</p>
+        </div>
+        <div class="form-group">
+            <label for="Name">Your Name <span class="span-class">*</span></label>
+            <input type="text" placeholder="John Doe" id="Name" />
+        </div>
+        <div class="form-group">
+            <label for="Email">Your Email<span class="span-class">*</span></label>
+            <input type="email" id="Email" placeholder="john.doe@example.com" required />
+        </div>
+        <div class="form-group">
+            <label for="idea">What are you looking to build?<span class="span-class">*</span></label>
+            <select name="ideas" id="idea">
+
+                <option value="blog">Blog</option>
+                <option value="onlineStore">Online Store</option>
+                <option value="game">Game</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="typeofplatform">Platform you want to support</label>
+            <input type="checkbox" id="typeofplatform" checked />
+            <label id="seperate_lbl">Web</label>
+            <input type="checkbox" id="typeofplatform" />
+            <label id="seperate_lbl">Mobile</label>
+            <input type="checkbox" id="typeofplatform" />
+            <label id="seperate_lbl">Desktop</label>
+
+        </div>
+        <div class="form-group">
+            <label for="msg_textArea" >Message</label>
+            <textarea name="Message" id="msg_textArea" cols="30" rows="3"></textarea>
+        </div>
+        <div class="btn">
+            <input type="Reset" value="Reset"/>
+            <input type="Submit" value="Send a message">
+        </div>
+    </form>
+    <hr>
+    &copy;example.com
+</body>
+
+</html>

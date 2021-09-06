@@ -1,0 +1,85 @@
+.panel{
+    top: 0;
+    border-radius:10px 10px 0 0 ;
+    padding: 20px;
+    color: white;
+}
+.body{
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+.panel-body-1{
+    border: 1px solid navy;
+}
+.panel-header-1{
+    background-color: navy;    
+}
+.panel-body-2{
+    border: 1px solid olive;
+}
+.panel-header-2{
+    background-color: olive;    
+}
+.panel-body-3{
+    border: 1px solid crimson;
+}
+.panel-header-3{
+    background-color: crimson;    
+}
+.main{
+    margin: 20px;
+}
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    border: 0px;
+    
+}
+.btn1{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 80px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+.btn-buy{
+    background-color: navy;
+}
+.btn-buy:hover{
+    background-color: rgb(34, 34, 116);
+}
+.btn-buy:active{
+    background-color: rgb(82, 82, 167);
+}
+.btn-ok{
+    background-color: olive;
+}
+.btn-ok:hover{
+    background-color: rgb(214, 214, 8);
+}
+.btn-ok:active{
+    background-color: rgb(236, 236, 111);;
+}
+.btn-delete{
+    background-color: crimson;
+}
+.btn-delete:hover{
+    background-color: rgb(253, 68, 105);
+}
+.btn-delete:active{
+    background-color: rgb(250, 141, 163);
+}
+.btn-google{
+    background-color: blue;
+}
+.btn-google:hover{
+    background-color: rgb(75, 75, 247);
+}
+.btn-google:active{
+    background-color: rgb(1, 1, 46);
+}

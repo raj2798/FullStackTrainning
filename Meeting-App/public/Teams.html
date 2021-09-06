@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="external/normalize.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/Teams.css" />
+    <!-- <link rel="stylesheet" href="css/Meetings.css" /> -->
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/pages/form.css" />
+    <title>Teams</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p class="Logo">myMeetings</p>
+        <ul class="list-left" id="listLeft">
+          <li><a href="calender.html" class="active">Calender</a></li>
+          <li><a href="Meetings.html">Meetings</a></li>
+          <li><a href="Teams.html">Teams</a></li>
+        </ul>
+        <input type="checkbox" id="check" />
+        <label for="check">
+          <i class="fas fa-bars" id="ham-btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <ul>
+          <li><a href="#" class="geetingUser">Hello</a></li>
+          <li><a href="#" class="geetingUser Email">abc@gmail.com</a></li>
+          <li><a href="index.html" class="btnLogout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Navbar End -->
+    <div class="container">
+      <div class="lblTop">Teams</div>
+      <hr />
+      <div id="para">View and edit teams you are part of</div>
+      <div class="TeamView">
+        <div class="TeamViewItem">
+          <div class="TeamViewDetails">
+            <p id="header-1">Customer acquisition campaign</p>
+            <p id="header-2">@customer-acquisition</p>
+            <p id="para">
+              Team to come up with stratergies to win over customers by end FY21
+            </p>
+            <button class="excuseYourself">Excuse Yourself</button>
+            <hr />
+            <label id="members">Members: </label>
+            <p id="emails">abc@example.com, jane@gmail.com</p>
+            <div class="select">
+              <select class="selectMember">
+                <option value="select">Select member</option>
+                <option value="abc">abc@gmail.com</option>
+                <option value="pqr">pqr@gmail.com</option>
+                <option value="xyz">xyz@gmail.com</option>
+                <option value="mno">mno@gmail.com</option>
+              </select>
+              <button id="btnAdd">Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 1box -->
+        <div class="TeamViewItem">
+          <div class="TeamViewDetails">
+            <p id="header-1">MERN stack trainning</p>
+            <p id="header-2">@mern-stack-trainning</p>
+            <p id="para">
+              Group attending MERN stack traning for website revamp project
+            </p>
+            <button class="excuseYourself">Excuse Yourself</button>
+            <hr />
+            <label id="members">Members: </label>
+            <p id="emails">abc@example.com, jane@gmail.com</p>
+            <div class="select">
+              <select class="selectMember">
+                <option value="select">Select member</option>
+                <option value="abc">abc@gmail.com</option>
+                <option value="pqr">pqr@gmail.com</option>
+                <option value="xyz">xyz@gmail.com</option>
+                <option value="mno">mno@gmail.com</option>
+              </select>
+              <button id="btnAdd">Add</button>
+            </div>
+          </div>
+        </div>
+        <!-- 2box -->
+        <div class="TeamViewItem">
+          <div class="addFormIcon">
+            <i
+              class="fa fa-plus clickForm"
+              onclick="test()"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+        <!-- end -->
+
+        <div class="team-add-form">
+          <div id="lblTitle">Add Team</div>
+          <hr />
+          <div class="cancel-form" onclick="cancel()">
+            <i class="fas fa-times"></i>
+          </div>
+          <form action="#">
+            <div class="input-fields">
+              <label>Team name:</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="input-fields">
+              <label>Username:</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="input-fields">
+              <label>Description:</label>
+              <textarea class="textArea"></textarea>
+            </div>
+            <div class="input-fields">
+              <label>Team Members:</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="input-fields">
+              <input type="Submit" value="Submit" class="btnSubmit" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="js/Toggle.js"></script>
+  </body>
+</html>

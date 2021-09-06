@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calender-hour {
+            height: 40px;
+            margin: 2px 0;
+            background-color: lightgray;
+        }
+
+        .calender {
+            position: relative;
+        }
+
+        .calender-meeting {
+            position: absolute;
+            width: 100%;
+            top: 304px;
+            /*[(( 40 + 2 ) * 7 ) + 20]   20 means half the height(7:30)*/
+            height: 42px;
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calender">
+        <div class="calender-hours">
+            <!-- markup for 24 hours in the calender and meetings{start meeting with one meeting, say7:30-8.30} -->
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+            <div class="calender-hour"></div>
+
+        </div>
+        <div class="calender-meeting">
+            <div class="calender-meeting" data-start-time="7:30" data-end-time="8:30"></div>
+        </div>
+    </div>
+</body>
+
+</html>

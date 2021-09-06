@@ -1,0 +1,85 @@
+.meeting-details {
+  margin-top: 10px;
+  border: 1px solid lightgray;
+  border-style: hidden;
+  width: 100%;
+  display: inline-block;
+  justify-content: space-between;
+}
+.schedule-picker {
+  display: flex;
+  justify-content: space-between;
+}
+.date-day {
+  display: block;
+  margin-left: 10px;
+  margin: 10px 0 10px 10px;
+}
+
+.date-day #date-string {
+  font-size: 25px;
+  font-weight: 500;
+}
+.date-day #day-string {
+  font-size: 17px;
+  margin: 10px 0 5px 35px;
+}
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+#pick-date {
+  background-color: rgb(240, 235, 235);
+  border-radius: 5px;
+}
+.calender {
+  position: relative;
+}
+.calender-hour {
+  margin-left: 2%;
+  height: 40px;
+  margin: 0px 2% 2px 20px;
+  width: 97%;
+  background-color: rgb(115, 207, 243);
+}
+
+.calender-meeting {
+  position: absolute;
+  width: 80%;
+  margin: 0 10%;
+  top: 168px;
+  height: 42px;
+  background-color: lightgray;
+}
+
+.meeting-2 {
+  width: 100%;
+  margin-left: 0;
+  height: 84px;
+  top: 230px;
+}
+
+.calender-meeting h5,
+p {
+  display: flex;
+  justify-content: center;
+  margin: 0 0;
+}
+span {
+  position: absolute;
+}
+@media (max-width: 600px) {
+  #pick-date {
+    width: 60%;
+    margin-right: -50px;
+  }
+  .date-day #date-string {
+    font-size: 20px;
+  }
+  .date-day #day-string {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+            /* by default*/
+            border: 2px solid black;
+        }
+
+        .col {
+            flex-basis: 30%;
+            
+        }
+        #col1{
+            flex-shrink: 1;
+        }
+        #col3{
+            flex-shrink: 2;
+        }
+        #col3{
+            flex-shrink: 3;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col" id="col1">
+            <span>Column1</span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam deleniti, incidunt voluptatum quia, in alias
+            asperiores amet a consectetur repudiandae fuga. Rem eius ad ex atque adipisci suscipit animi perferendis.
+        </div>
+        <div class="col" id="col2">
+            <span>Column2</span>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eum rerum a pariatur, quis eligendi nulla
+            earum iste excepturi ipsam sunt eius facere porro, minus labore ipsa consequuntur expedita accusantium.
+        </div>
+        <div class="col" id="col3">
+            <span>Column3</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt dolor dolore mollitia qui dicta
+            possimus veritatis, natus vel facere nemo nesciunt, itaque iure aperiam ad nam pariatur eveniet tempore?
+
+        </div>
+    </div>
+
+</body>
+
+</html>
