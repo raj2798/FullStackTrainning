@@ -8,38 +8,43 @@
   </head>
   <body>
     <div id="app"></div>
+
     <script type="module">
       import Vue from "./vue.esm.browser.js";
 
       new Vue({
         el: "#app",
+        // .prevent automatically results in event.preventDefault() being called
         template: `
-                <form @submit.prevent="login">
-                    <label for="fullname">Full name</label></br>
-                    <input type="text" id="fullname" name="fullname" v-model="credentials.fullname" /></br>
-                    The full name is {{credentials.fullname}}</br></br>
-                    <label for="password">Password</label></br>
-                    <input type="password" id="password" name="password" v-model="credentials.password" /></br>
-                    <button type="submit">Submit</button>
-                    <p> 
-                        Full name submitted is {{valuesToSubmit.fullname}}
-                    </p>
-                    <p> 
-                        Password submitted is {{valuesToSubmit.password}}
-                    </p>
-                </form>
-            `,
+                    <form @submit.prevent="login( $event )">
+                        <label for="fullname">Full name</label>
+                        <input type="text" id="fullname" name="fullname" v-model="credentials.fullname" />
+                        The full name is {{credentials.fullname}}
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" v-model="credentials.password" />
+                        <button type="submit">Submit</button>
+                        <p>
+                            Fullname submitted is {{valuesToSubmit.fullname}}
+                        </p>
+                        <p>
+                            Password submitted is {{valuesToSubmit.password}}
+                        </p>
+                    </form>
+                `,
         data: {
           credentials: {
-            fullname: "Raj Kshirsgar",
+            fullname: "John Doe",
             password: "",
           },
           valuesToSubmit: {},
         },
         methods: {
-          login(/*event*/) {
+          login(event) {
+            console.log(event);
+            // prevent page refresh (browser will request same page again on form submit - this prevents refresh)
             // event.preventDefault();
 
+            // we create a copy of the credentials object as we want ot keep the credentials and valuesTOSubmit as seprate objects
             this.valuesToSubmit = {
               ...this.credentials,
             };

@@ -32,8 +32,12 @@
         template: `
                     <div>
                         <!-- { success: true, 'priority-high' : false, 'priority-low': true } -->
+
+                        <-- EXERCISE : Add a button to change priority from high <-> low -->
                         <div :class="[ messageTypeStyle, messagePriorityStyle ]">{{message}}</div>
                         <div :style="[ messageTypeInlineStyle, messagePriorityInlineStyle ]">{{message}}</div>
+                        <button @click="togglePass">Toggle pass (true/false)</button>
+                        <button @click="togglePriority">Toggle priority</button>
                     </div>
                 `,
         data: {
@@ -45,7 +49,7 @@
           messageTypeStyle() {
             return {
               success: this.pass === true,
-              error: this.success === false,
+              error: this.pass === false,
             };
           },
           messagePriorityStyle() {
@@ -73,7 +77,18 @@
             }
           },
         },
-        methods: {},
+        methods: {
+          togglePass() {
+            this.pass = !this.pass;
+          },
+          togglePriority() {
+            if (this.priority === "high") {
+              this.priority = "low";
+            } else {
+              this.priority = "high";
+            }
+          },
+        },
       });
     </script>
   </body>
