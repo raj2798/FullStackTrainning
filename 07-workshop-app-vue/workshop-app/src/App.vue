@@ -2,7 +2,8 @@
   <div id="app">
     <AppNavbar />
     <div class="container my-3">
-      Hello Vue
+      <!-- placeholder for Router to show the matching component -->
+      <router-view></router-view>
     </div>
   </div>
 </template>

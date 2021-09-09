@@ -4,12 +4,10 @@
     <div class="container px-2">
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Nav 1 <span class="sr-only">(current)</span></a
-          >
+          <a class="nav-link" href="/">Home </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Nav 2</a>
+          <a class="nav-link" href="/workshops">List of Workshop</a>
         </li>
       </ul>
     </div>
