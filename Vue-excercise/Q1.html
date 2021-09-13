@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question-1</title>
+    <style>
+      form,
+      h2 {
+        display: flex;
+        flex-direction: column;
+        margin: 50px 10px;
+      }
+      input,
+      Button {
+        margin: 10px 0;
+        width: 200px;
+        padding: 5px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form action="/login" id="form-login">
+      <label for="uname">Username</label>
+      <input type="text" / id="uname" placeholder="Username">
+      <label for="Passwd">Password</label>
+      <input type="password" / id="Passwd" placeholder="Password">
+      <button>Login</button>
+    </form>
+    <script type="module">
+      import Vue from "./vue.esm.browser.js";
+      new Vue({
+        el: "#root",
+
+        template: `
+        <form action="/login" id="form-login">
+      <label for="uname">Username</label>
+      <input type="text" / id="uname" placeholder="Username">
+      <label for="Passwd">Password</label>
+      <input type="password" / id="Passwd" placeholder="Password">
+      <button @click="">Login</button>
+    </form>
+
+        `,
+        data: {},
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
