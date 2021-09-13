@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question2</title>
+
+    <style>
+      .main {
+        margin-left: 50px;
+      }
+      label {
+        display: inline-block;
+        width: 200px;
+        margin: 3px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main" id="login">
+      <h2>Login Form</h2>
+      <form action="/login">
+        <div>
+          <label for="uname"> Username</label>
+          <input type="text" id="uname" placeholder="Username" />
+        </div>
+        <div>
+          <label for="passwd"> Password</label>
+          <input type="password" id="passwd" placeholder="Password" />
+        </div>
+        <div><button>Login</button></div>
+      </form>
+    </div>
+
+    <div class="main" id="Signup">
+      <h2>Sign up Form</h2>
+      <form>
+        <div>
+          <label for="uname"> Username</label>
+          <input type="text" id="uname" placeholder="Username" />
+        </div>
+        <div>
+          <label for="passwd"> Password</label>
+          <input type="password" id="passwd" placeholder="Password" />
+        </div>
+        <div>
+          <label for="Re-passwd">Confirm Password</label>
+          <input
+            type="password"
+            id="Re-passwd"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <div><button>Sign up</button></div>
+      </form>
+    </div>
+    <script type="module">
+      import Vue from "./vue.esm.browser.js";
+
+      new Vue({
+        el: "#login",
+        template: `
+          <div class="main">
+        <h2>Login Form</h2>
+        <form>
+          <div>
+            <label for="uname"> Username</label>
+            <input type="text" id="uname" placeholder="Username"/>
+          </div>
+          <div>
+            <label for="passwd"> Password</label>
+            <input type="password" id="passwd" placeholder="Password"/>
+          </div>
+          <div><button>Login</button></div>
+        </form>
+      </div>
+          `,
+        data: {},
+        methods: {},
+      });
+
+      new Vue({
+        el: "#Signup",
+        template: `
+        <div class="main">
+      <h2>Sign up Form</h2>
+      <form>
+        <div>
+          <label for="uname"> Username</label>
+          <input type="text" id="uname" placeholder="Username"/>
+        </div>
+        <div>
+          <label for="passwd"> Password</label>
+          <input type="password" id="passwd" placeholder="Password"/>
+        </div>
+        <div>
+          <label for="Re-passwd">Confirm Password</label>
+          <input type="password" id="Re-passwd" placeholder="Confirm Password"/>
+        </div>
+        <div><button>Sign up</button></div>
+      </form>
+    </div>
+          `,
+        data: {},
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
