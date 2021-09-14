@@ -4,7 +4,11 @@
     <div class="container px-2">
       <ul class="nav navbar-nav">
         <li class="nav-item ">
-          <router-link class="nav-link" to="/" active-class="active"
+          <router-link
+            class="nav-link"
+            to="/"
+            active-class="active"
+            :exact="true"
             >Home
           </router-link>
         </li>

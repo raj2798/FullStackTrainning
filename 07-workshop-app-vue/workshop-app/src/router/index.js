@@ -1,21 +1,28 @@
 import Router from "vue-router";
 
 // @ -> src/ folder
-import Home from "@/components/Home";
+import AppHome from "@/components/AppHome";
 import WorkshopsList from "@/components/WorkshopsList";
+import WorkshopDetails from "@/components/WorkshopDetails";
 
 const router = new Router({
   mode: "history",
   routes: [
     {
-      name: "Home",
+      name: "home",
       path: "/",
-      component: Home,
+      component: AppHome,
     },
     {
-      name: "Home",
+      name: "workshops list",
       path: "/workshops",
       component: WorkshopsList,
+    },
+    {
+      name: "workshops list",
+      path: "/workshops/:id",
+      component: WorkshopDetails,
+      props: true,
     },
   ],
 });
