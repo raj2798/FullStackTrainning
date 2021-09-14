@@ -1,6 +1,14 @@
 <template>
   <div>
-    <h1>List of Workshops</h1>
+    <h1>
+      List of Workshops
+      <button
+        class="btn btn-primary btn-sm float-right"
+        @click="isDescriptionShown = !isDescriptionShown"
+      >
+        Toggle descriptions
+      </button>
+    </h1>
     <hr />
     <AppSpinner v-if="status === 'LOADING'" size="large" theme="primary" />
     <div v-else-if="status === 'LOADED'">
@@ -10,7 +18,8 @@
           v-for="workshop in workshops"
           :key="workshop.id"
         >
-          <WorkshopCard :workshop="workshop"> </WorkshopCard>
+          <WorkshopCard :workshop="workshop" :isShown="isDescriptionShown">
+          </WorkshopCard>
         </div>
       </div>
     </div>
@@ -44,6 +53,7 @@ export default {
       status: "LOADING",
       workshops: [],
       error: null,
+      isDescriptionShown: false,
     };
   },
   // lifecycle method

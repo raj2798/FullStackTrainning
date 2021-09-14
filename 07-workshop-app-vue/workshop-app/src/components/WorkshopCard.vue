@@ -1,5 +1,8 @@
 <template>
-  <div class="card">
+  <router-link
+    class="card text-reset text-decoration-none my-3"
+    :to="`/workshops/${workshop.id}`"
+  >
     <div class="card-body">
       <div class="card-img-container">
         <img
@@ -17,10 +20,10 @@
         <div>
           <span>{{ workshop.time }}</span>
         </div>
-        <div class="my-3" v-html="workshop.description"></div>
+        <div class="my-3" v-html="workshop.description" v-show="isShown"></div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -31,6 +34,10 @@ export default {
       type: Object,
       required: true,
     },
+    isShown: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     formatDate() {},
@@ -38,4 +45,19 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0px 0px 4px 0px goldenrod;
+  background-color: #fcfcfc;
+}
+.card-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  margin: 10px 0;
+}
+</style>
