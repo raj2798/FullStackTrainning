@@ -6,7 +6,7 @@
       <p class="lead">
         Welcome to Workshops App. You can find details of technical workshops
         happening nearby, here. Start
-        <router-link to="/workshops">here</router-link>.
+        <router-link :to="{ name: 'workshops list' }">here</router-link>.
       </p>
     </div>
   </div>

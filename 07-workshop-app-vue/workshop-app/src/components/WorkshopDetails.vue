@@ -60,18 +60,27 @@
       </div>
     </template>
 
-    <SessionsList :sessions="workshop.sessions" />
+    <router-link
+      :to="{ name: 'sessions list', params: { sessions: workshop.sessions } }"
+      >Sessions List</router-link
+    >
+    <router-link
+      :to="{ name: 'add session', params: { workshopId: workshop.id } }"
+      >Add a new session</router-link
+    >
+
+    <!-- <SessionsList :sessions="workshop.sessions" />
+        <AddSession :sessions="workshop.sessions" /> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import { getWorkshopById } from "@/services/workshops";
-import SessionsList from "@/components/SessionsList";
+// import SessionsList from "@/components/SessionsList";
 export default {
   name: "WorkshopDetails",
-  components: {
-    SessionsList,
-  },
+  components: {},
   props: {
     id: {
       type: [Number, String],
@@ -88,10 +97,24 @@ export default {
     };
   },
   created() {
+    // this call gets the details of workshop with given id, along with the sessions of the workshop
     getWorkshopById(this.id)
       .then((workshop) => {
         this.workshop = workshop;
         this.status = "LOADED";
+        console.log(this.$router);
+        this.$router.push({
+          name: "sessions list",
+          params: {
+            sessions: this.workshop.sessions,
+          },
+          query: {
+            // hack for initial loaded params to be different to avoid NavigationDuplicated error
+            errorBust: Math.random()
+              .toString()
+              .substr(2),
+          },
+        });
       })
       .catch((error) => {
         this.error = error;
