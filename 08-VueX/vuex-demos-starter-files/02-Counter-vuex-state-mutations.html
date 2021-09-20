@@ -47,25 +47,26 @@
 
       const Counter = {
         template: `
-                    <div class="counter">
-                        <button @click="decr" class="btn btn-dark btn-sm">-</button>
-                        <span class="value">{{value}}</span>
-                        <button @click="incr" class="btn btn-dark btn-sm">+</button>
-                    </div>
-                `,
+                          <div class="counter">
+                              <button @click="decr" class="btn btn-dark btn-sm">-</button>
+                              <span class="value">{{val}}</span>
+                              <button @click="incr" class="btn btn-dark btn-sm">+</button>
+                          </div>
+                      `,
         computed: {
-          value() {
-            return store.state.value;
+          val() {
+            return this.$store.state.value;
           },
         },
 
         // Define computed properties to get store properties
         methods: {
           incr() {
-            store.commit("increment");
+            console.log(this);
+            this.$store.commit("increment");
           },
           decr() {
-            store.commit("decrement");
+            this.$store.commit("decrement");
           },
         },
         // Define methods that commit mutations
@@ -73,16 +74,17 @@
 
       new Vue({
         el: "#app",
+        store,
         components: {
           Counter,
         },
         template: `
-                    <div id="app" class="container my-4">
-                        <h1>Counter</h1>
-                        <hr />
-                        <Counter />
-                    </div>
-                `,
+                          <div id="app" class="container my-4">
+                              <h1>Counter</h1>
+                              <hr />
+                              <Counter />
+                          </div>
+                      `,
       });
     </script>
   </body>
