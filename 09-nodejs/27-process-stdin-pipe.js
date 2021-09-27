@@ -1,6 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
-const ws = fs.createWriteStream(path.join(__dirname, "27-user-input.txt"));
+// write stream
+const ws = fs.createWriteStream(path.join(__dirname, "27-user-inputs.txt"));
 
-///26th file of puranik
+// read stream
+// process.stdin
+
+process.stdin.pipe(ws);

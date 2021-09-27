@@ -1,0 +1,2 @@
+This is stdin pipe example
+2nd example
