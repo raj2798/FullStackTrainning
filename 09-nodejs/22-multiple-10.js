@@ -23,7 +23,9 @@ class Countdown {
       }
     }, 100);
 
-    this.ee.emit("started");
+    this.ee.emit("started", {
+      a: 10,
+    });
   }
 
   stop() {
