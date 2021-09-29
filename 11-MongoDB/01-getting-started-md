@@ -1,0 +1,22 @@
+From within the folder with the data folder...
+mongod --dbpath=./data/db
+
+In Another terminal...
+mongod
+
+In mongo shell which has started...
+show dbs;
+
+//MongoDB is "schemaless" (you dont need to specify the tables, fields, and their data types)
+
+//RDBMS 
+//Table -> Collection (eg. weather(collection) data for many cities)
+//Row -> Document(the weather data for a string city)
+
+//creating Persons collections and work with it....
+//we'll insert few documents (few persons)
+//we'll query to check the persons in the db
+//we'll query with some filtering (eg. age>40)
+//we'll query based on nested data
+//we'll update data (update nme,email id, etc.)
+//we'll delete data
