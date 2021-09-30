@@ -153,11 +153,50 @@ db.shows.find({
   runtime: 45,
 });
 
-// iv) Find shows that have genre Drama but not Horror. Again, find shows that have
+// iv) Find shows that have genres Drama but not Horror. Again, find shows that have
 // genre Horror but not Drama.
 // Assignment
+
+db.shows.find({
+  $or: [
+    {
+      $and: [
+        { genres: "Drama" },
+        {
+          genres: {
+            $nin: ["Horror"],
+          },
+        },
+      ],
+    },
+    {
+      $and: [
+        { genres: "Horror" },
+        {
+          genres: {
+            $nin: ["Drama"],
+          },
+        },
+      ],
+    },
+  ],
+});
 
 // v) Find shows that do not have at least one of Drama or Horror as their genre
 // (i.e. show could have Drama but not Horror, Horror but not Drama, or neither
 // Drama not Horror)
 // Assignment
+db.shows
+  .find({
+    $or: [
+      {
+        genres: {
+          $nin: ["Drama", "Horror"],
+        },
+      },
+      {
+        $or: [{ generes: "Drama" }, { genres: "Horror" }],
+      },
+    ],
+  })
+  .count();
