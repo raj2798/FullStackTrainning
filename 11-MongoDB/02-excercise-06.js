@@ -49,7 +49,22 @@ db.shows.find({
 });
 //nin (not in)
 db.shows.find({
-  genres: {
-    $nin: ["Drama", "Horror"],
+  "network.name": {
+    $nin: ["HBO", "FOX"],
   },
 });
+
+//Logical OPerators
+db.shows.find({
+  $or: [{ genres: "Drama" }, { genres: "Horror" }],
+});
+
+db.shows
+  .find({
+    genres: {
+      $not: {
+        $in: ["Drama", "Horror"],
+      },
+    },
+  })
+  .count();
