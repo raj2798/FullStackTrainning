@@ -4,17 +4,30 @@ mongod --dbpath=./data/db
 In Another terminal...
 mongod
 
-In mongo shell which has started...
+In mongo shell which has started (show all databases)...
 show dbs;
 
 //MongoDB is "schemaless" (you dont need to specify the tables, fields, and their data types)
 
 //RDBMS 
+//DB-> DB(a group of collections - eg.weather, city, conversion_factors)
 //Table -> Collection (eg. weather(collection) data for many cities)
 //Row -> Document(the weather data for a string city)
 
+//switch to new databases
+use myApp;
+
 //creating Persons collections and work with it....
 //we'll insert few documents (few persons)
+
+db.persons.insertMany(
+    [
+        { name: 'John Doe', age: 32, emails: [ 'john@gmail.com', 'john@fynd.com' ] },
+        { name: 'Jane Doe', age: 28, emails: [ 'jane@fynd.com' ] }
+    ]
+);
+
+
 //we'll query to check the persons in the db
 //we'll query with some filtering (eg. age>40)
 //we'll query based on nested data
