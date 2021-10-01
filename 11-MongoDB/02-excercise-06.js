@@ -200,3 +200,125 @@ db.shows
     ],
   })
   .count();
+
+// Element operators - $exists and $type
+// i) Find shows that have a webChannel property
+db.shows.find({
+  webChannel: {
+    $exists: true,
+  },
+});
+
+db.shows.updateOne(
+  {},
+  {
+    $set: {
+      availableInIndia: "yes",
+    },
+  }
+);
+db.shows.find({
+  availableInIndia: {
+    $exists: true,
+  },
+});
+
+// ii) Find shows that have a webChannel with a country field within
+db.shows.find({
+  "webChannel.country": {
+    $exists: true,
+  },
+});
+
+// iii) Find shows which do not have a web channel (null)
+
+db.shows.find({
+  webChannel: null,
+});
+
+// iv) Find shows which have a web channel (not null, but an object)
+
+db.shows.find({
+  webChannel: {
+    $type: "object",
+  },
+});
+
+// v) Find shows which have a web channel (not null, but an object), but country for
+// webChannel is null
+db.shows.find({
+  webChannel: {
+    $type: "object",
+  },
+  "webChannel.country": null,
+});
+
+db.shows.find({
+  name: /Last/i,
+});
+
+db.shows.find({
+  $expr: {
+    $gt: [
+      "$weight",
+      {
+        $multiply: ["$rating.average", 10],
+      },
+    ],
+  },
+});
+
+db.shows.find({
+  schedule: {
+    $all: ["Monday", "Tuesday"],
+  },
+});
+
+db.exams.insertMany([
+  {
+    name: "John",
+    scores: [
+      { subject: "Maths", score: 91 },
+      { subject: "History", score: 95 },
+      { subject: "Physics", score: 75 },
+    ],
+  },
+  {
+    name: "Jane",
+    scores: [
+      { subject: "Geography", score: 82 },
+      { subject: "History", score: 65 },
+      { subject: "Physics", score: 79 },
+    ],
+  },
+  {
+    name: "Mark",
+    scores: [
+      { subject: "Arts", score: 99 },
+      { subject: "History", score: 88 },
+      { subject: "Biology", score: 90 },
+    ],
+  },
+]);
+
+db.exams.find(
+  {
+    "scores.subject": "History",
+  },
+  {
+    "scores.$": true,
+  }
+);
+
+db.exams.find({
+  scores: {
+    $elemMatch: {
+      subject: "History",
+      score: {
+        $gt: 90,
+      },
+    },
+  },
+});
+
+db.exams.find({}, {});

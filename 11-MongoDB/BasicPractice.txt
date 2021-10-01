@@ -1,0 +1,38 @@
+db.Comments.insert({
+  _id: 101,
+  name: "Raj Kshirsagar",
+  Add: "Riswadi",
+  ptr: 7.43,
+});
+
+db.Comments.insertMany([
+  { _id: 102, name: "Suyog Malkar", Add: "Rees", ptr: 7.5 },
+  { _id: 103, name: "Ayush Tomar", Add: "Kambe", ptr: 8 },
+  { _id: 104, name: "Chaitanya Pathak", Add: "Chambharli", ptr: 9.1 },
+]);
+
+db.Comments.insertMany([
+  {
+    _id: 105,
+    name: "Salman Khan",
+    Add: [{ city: "Panvel", pinCode: 100212 }],
+    ptr: 3.9,
+  },
+  {
+    _id: 106,
+    name: "Virat Kohli",
+    Add: [{ city: "Delhi", pinCode: 210212 }],
+    ptr: 5,
+  },
+]);
+
+db.Comments.Add.city.find({
+  name: "Salman Khan",
+});
+
+db.Comments.updateOne(
+  { name: "Raj Kshirsagar" },
+  {
+    $set: { name: "Rohit Sharma" },
+  }
+);
