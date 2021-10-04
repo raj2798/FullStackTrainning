@@ -101,6 +101,121 @@ db.shows.updateMany(
 );
 
 // viii. Try finding a document with a show name that does not exist (also use language :
-// “English” while finding). Set the rating and genres for it. Use the upsert option and check that
-//the upserted documented has fields that are part of the filter clause, as
+// “English” while finding). Set the rating and genres for it. Use the upsert option and check that the upserted documented has fields that are part of the filter clause, as
 // well as the update clause
+db.shows.updateOne(
+  {
+    name: "Kapil Sharma Show",
+    language: "English",
+  },
+  {
+    $set: {
+      "rating.average": 9,
+      genres: ["Comedy", "Drama"],
+    },
+  },
+  {
+    upsert: true,
+  }
+);
+
+// Array update operators - $, $push, $each, $sort, $slice, $pull, $pop, $addToSet
+// i) Update all shows that have a scheduled screening on “Monday”, and replace the
+// item “Monday” with “monday” (lowercase). Hint: Use $ operator.
+
+// Here $ refers to the matched index -
+// {
+//     name: 'Show 1',
+//     schedule: {
+//         days: [
+//             'Sunday',
+//             'Monday'
+//         ]
+//     }
+// },
+// {
+//     name: 'Show 2',
+//     schedule: {
+//         days: [
+//             'Tuesday',
+//             'Monday'
+//         ]
+//     }
+// }
+
+db.shows.updateMany(
+  {
+    "schedule.days": "Monday",
+  },
+  {
+    $set: {
+      "schedule.days.$": "monday",
+    },
+  }
+);
+
+// ii) Update all shows with genre “Horror” by adding another genre “Supernatural”
+db.shows.updateMany(
+  {
+    genres: "Horror",
+  },
+  {
+    $push: {
+      genres: "Supernatural",
+    },
+  }
+);
+
+// iii) Update all shows with genre “Horror” by adding 2 other genres “Supernatural” and
+// “Spook” (you will need to use $each). Also explore how $sort and $slice can be used
+// in this case.
+db.shows.updateMany(
+  {
+    genres: "Horror",
+  },
+  {
+    $push: {
+      genres: {
+        $each: ["Supernatural", "Spook"],
+      },
+    },
+  }
+);
+
+// iv) Remove the genre Supernatural from the first matching document
+db.shows.updateOne(
+  {
+    genres: "Supernatural",
+  },
+  {
+    $pull: {
+      genres: "Supernatural",
+    },
+  }
+);
+
+// v) Remove the last genre from every document
+db.shows.updateMany(
+  {}, // no filtering
+  {
+    $pop: {
+      genres: 1,
+    },
+  }
+);
+
+// vi) Add genre Supernatural to all documents of genre Horror. However the
+// Supernatural genre should not be added if it already exists as a genre in the
+// document.
+db.shows.updateMany(
+  {
+    genres: "Horror",
+  },
+  {
+    $addToSet: {
+      genres: {
+        $each: ["Horror"],
+      },
+    },
+  }
+);
