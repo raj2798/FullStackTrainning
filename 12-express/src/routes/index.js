@@ -1,15 +1,10 @@
 const express = require("express");
-
+const { meetings } = require("../controllers/index");
+const { home } = require("../controllers/index");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.write("Hello, Express");
-  res.end("That is all for now");
-});
+router.get("/", home);
 
-router.get("/home", (req, res) => {
-  res.write("Hello, Express on home\n");
-  res.end("That is all for now for home");
-});
+router.get("/meetings", meetings);
 
 module.exports = router;
