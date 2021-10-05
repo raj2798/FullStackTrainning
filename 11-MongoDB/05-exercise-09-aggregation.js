@@ -56,6 +56,27 @@ db.shows.aggregate([
 // iii) Repeat the above query but create a new field called “stats” in the output
 // documents. The “stats” field should have number of shows, and average runtime of
 // shows for the group.
+db.shows.aggregate([
+  {
+    $group: {
+      _id: {
+        name: "$network.name",
+        countryCode: "$network.country.code",
+      },
+
+      numShows: {
+        $count: {},
+      },
+      avgRuntime: {
+        $avg: "$runtime",
+      },
+      showNames: {
+        $push: "$name",
+      },
+    },
+  },
+]);
+
 // iv) Just like we can transform document to form new fields with subdocuments while
 // projecting, we can also create a new array. Using the $push operator in $group stage,
 // we can create a new array with one item per document in the group! This is a special
