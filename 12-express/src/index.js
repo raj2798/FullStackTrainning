@@ -8,8 +8,15 @@ const app = express();
 // middleware 1
 app.use(logger);
 
+// built-in Express middleware
+// Set up form data on req.body
+app.use(express.urlencoded({ extended: false }));
+
+// Set up JSON data sent using Ajax request on req.body
+app.use(express.json());
+
 // set up index router to take care of routing to home page
-// middleware 2
+// middleware 4
 app.use(indexRouter);
 
 // NODE_ENV is an environment variable generally setup to indicate which environment you are working on
