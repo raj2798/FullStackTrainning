@@ -4,6 +4,12 @@ const indexRouter = require("./routes/index");
 
 // This creates an Express application object - this includes an HTTP server
 const app = express();
+
+app.use((req, res, next) => {
+  console.log("Request has been received");
+  next();
+});
+
 app.use(indexRouter);
 
 // NODE_ENV is an environment variable generally setup to indicate which environment you are working on
