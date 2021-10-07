@@ -5,6 +5,9 @@ const workshopsRouter = require("./routes/workshops");
 // This creates an Express application object - this includes an HTTP server
 const app = express();
 
+app.get("view engine", "ejs");
+app.set("view", path.join(__dirname, "views"));
+
 // middleware 1
 app.use(logger);
 
